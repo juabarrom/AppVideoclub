@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+    <html xmlns="http://www.w3.org/1999/xhtml" >
+        <h:head></h:head>
+        
+        <h:body>
+        
+        <!--ES IMPORTANTE QUE LA ETIQUETA <h:outputText value="NOVEDADES"/> ESTE DENTRO DEL DIV PARA QUE MAQUETE BIEN-->
+            <!--LISTA TOP10 EN VENTAS-->
+            <h:outputText value="TOP5"/>
+            <div id="pieTop"></div>
+            
+            <!--LISTA DE NOVEDADES-->
+            <div id="pieNovedades">
+            <h:outputText value="NOVEDADES"/>
+            <p:dataList value="#{pieFaceletsBacking.juegosNovedades}"  var="juego" itemType="square" > 
+                <h:outputText value="#{juego.nombre}"/>
+            </p:dataList>
+            </div>
+            
+            <!--LISTA DE PROXIMAMENTE-->
+            <div id="pieProximamente">
+            <h:outputText value="PROXIMAMENTE"/>
+            <p:dataList value="#{pieFaceletsBacking.juegosProximamente}"  var="juego" itemType="square">
+                <h:outputText value="#{juego.nombre}"/>
+            </p:dataList>
+            </div>
+        </h:body>
+        
+    </html>
+</f:view>

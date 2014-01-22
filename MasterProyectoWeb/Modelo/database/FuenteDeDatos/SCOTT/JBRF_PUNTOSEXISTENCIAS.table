@@ -1,0 +1,608 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">cb301980-ebd6-474b-88ed-9f5afd6a5089</identifier>
+  </ID>
+  <name>JBRF_PUNTOSEXISTENCIAS</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b6b26b75-2ae9-4530-9bdd-845c435f68e2</identifier>
+      </ID>
+      <name>ID_PUNTOSEXISTENCIAS</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">ffae1e35-5943-45ad-91fc-a5d492fc1dbb</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ID_PUNTOSEXISTENCIAS</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PUNTOSEXISTENCIAS</name>
+                  <identifier class="java.math.BigDecimal">714743</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ID_PUNTOSEXISTENCIAS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">1ac34130-eda1-421e-ba39-9d22d6e36f91</identifier>
+      </ID>
+      <name>ID_EXISTENCIAS</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">6b50b29f-af6b-4437-a3ab-4852946434e7</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ID_EXISTENCIAS</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PUNTOSEXISTENCIAS</name>
+                  <identifier class="java.math.BigDecimal">714743</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ID_EXISTENCIAS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">83faa31c-270b-43f5-bd7c-b17dc263dace</identifier>
+      </ID>
+      <name>PUNTOS_DVD</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">84043b94-014c-4b13-9249-e06e23a72a71</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PUNTOS_DVD</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PUNTOSEXISTENCIAS</name>
+                  <identifier class="java.math.BigDecimal">714743</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">REPRESENTA EL VALOR MONETARIO DE LOS OBJETOS EN PUNTOS</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUNTOS_DVD</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">2c7b4eab-3a1d-4a90-b065-b6007f0a18ee</identifier>
+      </ID>
+      <name>PUNTOS_BLURAY</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">99f9134b-add7-4e88-9a67-09343b6554b5</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PUNTOS_BLURAY</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PUNTOSEXISTENCIAS</name>
+                  <identifier class="java.math.BigDecimal">714743</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">REPRESENTA EL VALOR MONETARIO DE LOS OBJETOS EN PUNTOS</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUNTOS_BLURAY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0a06b87d-dc2c-4108-9d62-abc81de8a160</identifier>
+      </ID>
+      <name>PUNTOS_JUEGO</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f1aa47e0-385a-4b62-a5f8-82ad635c7268</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PUNTOS_JUEGO</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PUNTOSEXISTENCIAS</name>
+                  <identifier class="java.math.BigDecimal">714743</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">REPRESENTA EL VALOR MONETARIO DE LOS OBJETOS EN PUNTOS</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUNTOS_JUEGO</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">263b7efb-96db-43b5-b285-906c0cfe742c</identifier>
+      </ID>
+      <name>PEXISTENCIAS_FK_EXISTENCIA</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_EXISTENCIAS</name>
+          <identifier class="java.lang.String">1ac34130-eda1-421e-ba39-9d22d6e36f91</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PUNTOSEXISTENCIAS</name>
+            <identifier class="java.lang.String">cb301980-ebd6-474b-88ed-9f5afd6a5089</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCOTT</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PEXISTENCIAS_FK_EXISTENCIA</name>
+            <childObjectNames>
+              <childObjectName>ID_EXISTENCIAS</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>EXISTENCIA_PK</name>
+        <identifier class="java.lang.String">1beb4664-c37c-44e6-8311-4c94ea79e9bd</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>JBRF_EXISTENCIA</name>
+          <identifier class="java.lang.String">7bd464e5-3fd9-4f56-9959-71e34257cd5a</identifier>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCOTT</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">a589afd1-5dfe-41b4-8e12-a4035370e835</identifier>
+      </ID>
+      <name>PUNTOSEXISTENCIAS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_PUNTOSEXISTENCIAS</name>
+          <identifier class="java.lang.String">b6b26b75-2ae9-4530-9bdd-845c435f68e2</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PUNTOSEXISTENCIAS</name>
+            <identifier class="java.lang.String">cb301980-ebd6-474b-88ed-9f5afd6a5089</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCOTT</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PUNTOSEXISTENCIAS_PK</name>
+        <identifier class="java.lang.String">94fd3a14-df27-499a-94f4-e56b3e5a5c78</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>JBRF_PUNTOSEXISTENCIAS</name>
+          <identifier class="java.lang.String">cb301980-ebd6-474b-88ed-9f5afd6a5089</identifier>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCOTT</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUNTOSEXISTENCIAS_PK</name>
+            <childObjectNames>
+              <childObjectName>ID_PUNTOSEXISTENCIAS</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">94fd3a14-df27-499a-94f4-e56b3e5a5c78</identifier>
+      </ID>
+      <name>PUNTOSEXISTENCIAS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">a563a265-d159-4206-9995-0e6fe459c418</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">59182c99-2b9c-4f68-859b-521de4c0f6dd</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.lang.String">b6b26b75-2ae9-4530-9bdd-845c435f68e2</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>JBRF_PUNTOSEXISTENCIAS</name>
+                <identifier class="java.lang.String">cb301980-ebd6-474b-88ed-9f5afd6a5089</identifier>
+                <schemaName>SCOTT</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>SCOTT</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>PUNTOSEXISTENCIAS_PK</name>
+                      <identifier class="java.math.BigDecimal">714744</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>JBRF_PUNTOSEXISTENCIAS</name>
+                        <identifier class="java.math.BigDecimal">714743</identifier>
+                        <schemaName>SCOTT</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>SCOTT</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PUNTOSEXISTENCIAS_PK</name>
+                  <identifier class="java.math.BigDecimal">714744</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>JBRF_PUNTOSEXISTENCIAS</name>
+                    <identifier class="java.math.BigDecimal">714743</identifier>
+                    <schemaName>SCOTT</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>SCOTT</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUNTOSEXISTENCIAS_PK</name>
+            <identifier class="java.math.BigDecimal">714744</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PUNTOSEXISTENCIAS</name>
+              <identifier class="java.math.BigDecimal">714743</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>SCOTT</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">5110cb7c-4cb3-48b5-a008-0f7174d0e698</identifier>
+            </ID>
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>2147483645</maxExtent>
+            <maxtrans>255</maxtrans>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>PUNTOSEXISTENCIAS_PK</name>
+                    <identifier class="java.math.BigDecimal">714744</identifier>
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>JBRF_PUNTOSEXISTENCIAS</name>
+                      <identifier class="java.math.BigDecimal">714743</identifier>
+                      <schemaName>SCOTT</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCOTT</schemaName>
+                    <type>INDEX</type>
+                  </parent>
+                  <type>OracleStorageProperties</type>
+                </value>
+              </entry>
+            </properties>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>SCOTT</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">FuenteDeDatos</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>JBRF_PUNTOSEXISTENCIAS</name>
+        <identifier class="java.math.BigDecimal">714743</identifier>
+        <schemaName>SCOTT</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">53cc69dd-494b-49b6-a0eb-395c2d4bafb3</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <maxtrans>255</maxtrans>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>JBRF_PUNTOSEXISTENCIAS</name>
+                <identifier class="java.math.BigDecimal">714743</identifier>
+                <schemaName>SCOTT</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>SCOTT</name>
+  </schema>
+</table>

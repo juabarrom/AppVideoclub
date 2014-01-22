@@ -1,0 +1,754 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+  </ID>
+  <name>JBRF_PRODUCCION</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">df502671-3c93-4fee-9f03-44019a940fac</identifier>
+      </ID>
+      <name>ID_EXISTENCIAS</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">323c5bcc-e489-43e5-bfa1-dfb124ee2ded</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ID_EXISTENCIAS</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PRODUCCION</name>
+                  <identifier class="java.math.BigDecimal">714747</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ID_EXISTENCIAS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5e9c4efb-aaf7-4ab6-afc2-fc72b4b3bb10</identifier>
+      </ID>
+      <name>ID_ADG</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">47056b69-013a-42fe-a898-8ad26e66241d</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ID_ADG</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PRODUCCION</name>
+                  <identifier class="java.math.BigDecimal">714747</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ID_ADG</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b0620349-f7e3-41c9-9bb3-7f5ec8e98e11</identifier>
+      </ID>
+      <name>ES_GUIONISTA</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">3de5a009-2679-46a7-b99f-9337064e1c29</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ES_GUIONISTA</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PRODUCCION</name>
+                  <identifier class="java.math.BigDecimal">714747</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">LOS POSIBLES VALORES SON:
+-SI
+-NO</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ES_GUIONISTA</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5bfee492-06fb-4ed8-8307-922b90d0e230</identifier>
+      </ID>
+      <name>ES_ACTOR</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f52d154f-e78c-4740-9c3b-20066b86e30c</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ES_ACTOR</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PRODUCCION</name>
+                  <identifier class="java.math.BigDecimal">714747</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">LOS POSIBLES VALORES SON:
+-SI
+-NO</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ES_ACTOR</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b4337b8b-9a4b-4dd8-9447-255dfc1cd9e2</identifier>
+      </ID>
+      <name>ES_DIRECTOR</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">964925e7-1a48-43ae-9086-6464c2e485fa</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ES_DIRECTOR</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>JBRF_PRODUCCION</name>
+                  <identifier class="java.math.BigDecimal">714747</identifier>
+                  <schemaName>SCOTT</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">LOS POSIBLES VALORES SON:
+-SI
+-NO</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ES_DIRECTOR</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">97739170-23d1-4472-bd5d-9999d7609219</identifier>
+      </ID>
+      <name>PRODUCCION_FK_ADG</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_ADG</name>
+          <identifier class="java.lang.String">5e9c4efb-aaf7-4ab6-afc2-fc72b4b3bb10</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PRODUCCION</name>
+            <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCCION_FK_ADG</name>
+            <childObjectNames>
+              <childObjectName>ID_ADG</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>ADG_PK</name>
+        <identifier class="java.lang.String">263df0a5-36d7-4ba7-9258-ec416054cba2</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>JBRF_ADG</name>
+          <identifier class="java.lang.String">7f12fb7a-c56b-4144-870e-ca0a4291c126</identifier>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCOTT</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6f4cdaa6-3ded-4bf8-bce4-2d6d2b0d082d</identifier>
+      </ID>
+      <name>PRODUCCION_FK_EXISTENCIA</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_EXISTENCIAS</name>
+          <identifier class="java.lang.String">df502671-3c93-4fee-9f03-44019a940fac</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PRODUCCION</name>
+            <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCCION_FK_EXISTENCIA</name>
+            <childObjectNames>
+              <childObjectName>ID_EXISTENCIAS</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>EXISTENCIA_PK</name>
+        <identifier class="java.lang.String">1beb4664-c37c-44e6-8311-4c94ea79e9bd</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>JBRF_EXISTENCIA</name>
+          <identifier class="java.lang.String">7bd464e5-3fd9-4f56-9959-71e34257cd5a</identifier>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCOTT</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">728bde8e-39bc-4a85-b5e8-71b48dd101ae</identifier>
+      </ID>
+      <name>PRODUCCION_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_EXISTENCIAS</name>
+          <identifier class="java.lang.String">df502671-3c93-4fee-9f03-44019a940fac</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PRODUCCION</name>
+            <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_ADG</name>
+          <identifier class="java.lang.String">5e9c4efb-aaf7-4ab6-afc2-fc72b4b3bb10</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>JBRF_PRODUCCION</name>
+            <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+            <schemaName>SCOTT</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRODUCCION_PK</name>
+        <identifier class="java.lang.String">260f2d2d-5bfb-4043-b54a-22a52b371d3e</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>JBRF_PRODUCCION</name>
+          <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+          <schemaName>SCOTT</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCOTT</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCCION_PK</name>
+            <childObjectNames>
+              <childObjectName>ID_EXISTENCIAS</childObjectName>
+              <childObjectName>ID_ADG</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">260f2d2d-5bfb-4043-b54a-22a52b371d3e</identifier>
+      </ID>
+      <name>PRODUCCION_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">029e14f6-6422-473d-a72d-2bcda6c5e82c</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">5a13d5a7-44ae-462b-8b46-9debdc7955f3</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID_EXISTENCIAS</name>
+              <identifier class="java.lang.String">df502671-3c93-4fee-9f03-44019a940fac</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>JBRF_PRODUCCION</name>
+                <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+                <schemaName>SCOTT</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>PRODUCCION_PK</name>
+                      <identifier class="java.math.BigDecimal">714748</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>JBRF_PRODUCCION</name>
+                        <identifier class="java.math.BigDecimal">714747</identifier>
+                        <schemaName>SCOTT</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>SCOTT</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCCION_PK</name>
+                  <identifier class="java.math.BigDecimal">714748</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>JBRF_PRODUCCION</name>
+                    <identifier class="java.math.BigDecimal">714747</identifier>
+                    <schemaName>SCOTT</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>SCOTT</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">b60abf35-512d-4a4f-9c3b-3cfc13038638</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">f7c52f61-6ef4-45e0-ab0e-c93964122cdf</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID_ADG</name>
+              <identifier class="java.lang.String">5e9c4efb-aaf7-4ab6-afc2-fc72b4b3bb10</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>JBRF_PRODUCCION</name>
+                <identifier class="java.lang.String">812f6100-7f68-4456-897c-5de9798b260c</identifier>
+                <schemaName>SCOTT</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>PRODUCCION_PK</name>
+                      <identifier class="java.math.BigDecimal">714748</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>JBRF_PRODUCCION</name>
+                        <identifier class="java.math.BigDecimal">714747</identifier>
+                        <schemaName>SCOTT</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>SCOTT</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>PRODUCCION_PK</name>
+                  <identifier class="java.math.BigDecimal">714748</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>JBRF_PRODUCCION</name>
+                    <identifier class="java.math.BigDecimal">714747</identifier>
+                    <schemaName>SCOTT</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>SCOTT</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRODUCCION_PK</name>
+            <identifier class="java.math.BigDecimal">714748</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>JBRF_PRODUCCION</name>
+              <identifier class="java.math.BigDecimal">714747</identifier>
+              <schemaName>SCOTT</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>SCOTT</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">ffa56347-f679-4717-802e-557529f51065</identifier>
+            </ID>
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>2147483645</maxExtent>
+            <maxtrans>255</maxtrans>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>PRODUCCION_PK</name>
+                    <identifier class="java.math.BigDecimal">714748</identifier>
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>JBRF_PRODUCCION</name>
+                      <identifier class="java.math.BigDecimal">714747</identifier>
+                      <schemaName>SCOTT</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCOTT</schemaName>
+                    <type>INDEX</type>
+                  </parent>
+                  <type>OracleStorageProperties</type>
+                </value>
+              </entry>
+            </properties>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>SCOTT</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">FuenteDeDatos</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>JBRF_PRODUCCION</name>
+        <identifier class="java.math.BigDecimal">714747</identifier>
+        <schemaName>SCOTT</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e9ea3f0c-a2f2-4804-954c-6a72fc1853ef</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <maxtrans>255</maxtrans>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>JBRF_PRODUCCION</name>
+                <identifier class="java.math.BigDecimal">714747</identifier>
+                <schemaName>SCOTT</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>SCOTT</name>
+  </schema>
+</table>

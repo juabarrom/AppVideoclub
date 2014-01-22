@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+            
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+                <h:form>
+                    <h:selectOneRadio value="#{productosBacking.elegido}" immediate="true">
+                        <f:selectItems value="#{productosBacking.menuElegido}"/>
+                        <f:ajax event="change" execute="@this" render="idTablaJuego"/>
+                    </h:selectOneRadio>
+                
+                
+                <h:dataTable id="idTablaJuego" value="#{productosBacking.juegos}" var="juego" border="2">
+                
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Nombre"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.nombre}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Plataforma"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.plataforma}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Uds"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.udsexistencia.udsJuego}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Puntos"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.puntosexistencias.puntosJuego}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Descuento de..."/>
+                        </f:facet>
+                        <h:outputText value="#{juego.descuento}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Novedad"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.esNovedad}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Proximamente"/>
+                        </f:facet>
+                        <h:outputText value="#{juego.esProximamente}"/>
+
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="ID"/>
+                        </f:facet>
+                        <h:link value="Modificar" outcome="datosDeJuegos">
+                            <f:param name="idJuego" value="#{juego.idExistencia}"/>
+                        </h:link>
+                        
+                    </h:column>
+                </h:dataTable>
+                </h:form>
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>
+
+
+            
+                        

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="FuenteDeDatos" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="FuenteDeDatos" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>orc1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>150.214.142.20</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>scott</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="conexionOracle" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="conexionOracle" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>orc1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>scott</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>150.214.142.20</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+                <h:form>
+                    <h:outputLabel value="Nombre"/>
+                    <h:inputText id="nombre" value="#{formularioUsuario.nombre}" required="true" requiredMessage="Introduzca su nombre" validatorMessage="Nombre no válido, por favor no introduzca ni simbolos, ni números">
+                        <f:validateRegex pattern="[^0-9\W[\s]]*"/>
+                    </h:inputText><br/>
+                    <h:message for="nombre" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Apellidos"/>
+                    <h:inputText id="apellidos" value="#{formularioUsuario.apellidos}" required="true" requiredMessage="Introduzca sus apellidos" validatorMessage="Apellidos no válidos, por favor no introduzca ni simbolos, ni números">
+                        <f:validateRegex pattern="[^0-9\W[\s]]*"/>
+                    </h:inputText><br/>
+                    <h:message for="apellidos" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="E-mail"/>
+                    <h:inputText id="correo" value="#{formularioUsuario.correo}" required="true" requiredMessage="Introduzca su correo" validatorMessage="El formato del e-mail no es válido">
+                        <f:validateRegex pattern="^[a-zA-Z0-9_-]{2,15}@[a-zA-Z0-9_-]{2,15}.[a-zA-Z]{2,4}(.[a-zA-Z]{2,4})?$"/>
+                    </h:inputText><br/>
+                    <h:message for="correo" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Contraseña"/>
+                    <h:inputSecret id="contrasenya" value="#{formularioUsuario.contrasenya}"  required="true" requiredMessage="Introduzca la contraseña"
+                                   validator="#{formularioUsuario.comprobarContrasenya}" >
+                    </h:inputSecret><br/>
+                    <h:message for="contrasenya" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Repita la contraseña"/>
+                    <h:inputSecret id="repetirContrasenya" value="#{formularioUsuario.repetirContrasenya}" required="true" requiredMessage="Introduzca la contraseña otra vez"
+                                   validator="#{formularioUsuario.comprobarContrasenyaRepetida}">
+                    </h:inputSecret><br/>
+                    <h:message for="repetirContrasenya" style="color:red"/><br/>
+                    
+                    <h:outputLabel value="Telefono"/>
+                    <h:inputText id="telefono" size="9" maxlength="9" value="#{formularioUsuario.telefono}" validatorMessage="Formato de teléfono no válido">
+                        <f:validateRegex pattern="\d{9}"/>
+                    </h:inputText><br/>
+                    <h:message for="telefono" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Movil"/>
+                    <h:inputText id="movil" size="9" maxlength="9" value="#{formularioUsuario.movil}" validatorMessage="Formato de teléfono no válido">
+                        <f:validateRegex pattern="\d{9}"/>
+                    </h:inputText><br/>
+                    <h:message for="movil" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Cod-Postal"/>
+                    <h:inputText id="codpostal" size="5" maxlength="5" value="#{formularioUsuario.codpostal}" required="true" requiredMessage="Introduzca su código postal" validatorMessage="Formato de código postal no válido">
+                        <f:validateRegex pattern="\d{5}"/>
+                    </h:inputText><br/>
+                    <h:message for="codpostal" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Provincia"/>
+                    <h:inputText id="provincia" value="#{formularioUsuario.nombre}" required="true" requiredMessage="Introduzca la provincia" validatorMessage="Provincia no válido, por favor no introduzca ni simbolos, ni números">
+                        <f:validateRegex pattern="[^0-9\W[\s]]*"/>
+                    </h:inputText><br/>
+                    <h:message for="provincia" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Ciudad"/>
+                    <h:inputText id="ciudad" value="#{formularioUsuario.apellidos}" required="true" requiredMessage="Introduzca sus ciudad" validatorMessage="Ciudad no válidos, por favor no introduzca ni simbolos, ni números">
+                        <f:validateRegex pattern="[^0-9\W[\s]]*"/>
+                    </h:inputText><br/>
+                    <h:message for="ciudad" style="color:red;"/><br/>
+                    
+                    <!--
+                    <h:outputLabel value="Provincia"/>
+                    <h:selectOneMenu id="provincia" value="#{formularioUsuario.provinciaElegida}" converterMessage="MAMON" requiredMessage="CERDO">
+                        <f:ajax event="valueChange" render="idCiudadSegunProvincia" execute="@this"/>
+                        <f:selectItems value="#{formularioUsuario.provincias}" />
+                    </h:selectOneMenu>
+                    <br/><br/>
+                    
+                    <h:outputLabel value="Ciudad"/>
+                    <h:selectOneMenu id="idCiudadSegunProvincia" value="#{formularioUsuario.ciudadElegida}">
+                        <f:selectItems value="#{formularioUsuario.ciudad}"/>
+                    </h:selectOneMenu>
+                    <br/>
+                    <h:message for="idCiudadSegunProvincia" style="color:red"/><br/>
+                    -->
+                    
+                    <h:outputLabel value="Dirección"/>
+                    <h:inputText id="direccion" value="#{formularioUsuario.direccion}" required="true" requiredMessage="Introduzca su dirección" validatorMessage="No introduzca simbolos extraños, del tipo [. % · = - # >]etc...">
+                        <f:validateRegex pattern="[^\W[ºª/\s\\]]*"/>                
+                    </h:inputText><br/>
+                    <h:message for="direccion" style="color:red;"/>
+                    <br/><br/>
+                    
+                    <h:commandButton value="Registrar" action="#{formularioUsuario.anyadirClienteYDirrecion}"/>
+    
+                </h:form>       
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>

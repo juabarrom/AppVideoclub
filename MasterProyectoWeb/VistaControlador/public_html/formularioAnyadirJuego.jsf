@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+                <h:form>
+                    <h:outputLabel value="Nombre"/>
+                    <h:inputText id="nombre" value="#{anyadirJuegoBacking.nombre}" required="true" requiredMessage="Introduzca su nombre" validatorMessage="Nombre no válido, por favor no introduzca simbolos">
+                        <f:validateRegex pattern="[^\W[\s]]*"/>
+                    </h:inputText><br/>
+                    <h:message for="nombre" style="color:red;"/><br/>
+                    
+                    
+                    <h:outputLabel value="Genero"/>
+                    <h:selectOneMenu id="genero" value="#{anyadirJuegoBacking.generoElegido}">
+                        <f:selectItems value="#{anyadirJuegoBacking.generos}"/>
+                    </h:selectOneMenu>
+                    <br/>
+                    
+                    <h:outputLabel value="Plataforma"/>
+                    <h:selectOneMenu id="plataforma" value="#{anyadirJuegoBacking.plataformaElegida}">
+                        <f:selectItems value="#{anyadirJuegoBacking.plataformas}"/>
+                    </h:selectOneMenu>
+                    <br/>
+                    
+                   <h:outputLabel value="Descripción:"/><br/>
+                    <h:inputTextarea id="descripcion" rows="10" cols="50" value="#{anyadirJuegoBacking.descripcion}" required="true" requiredMessage="Introduzca su descripcion">
+                    </h:inputTextarea><br/>
+                    <h:message for="descripcion" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Puntos del juego"/>
+                    <h:inputText id="puntosDelJuego"   value="#{anyadirJuegoBacking.puntosDelJuego}" required="true" requiredMessage="Introduzca los puntos que valdra el juego" validatorMessage="Nombre no válido, por favor no introduzca ni simbolos, ni letras" size="4" maxlength="4">
+                        <f:validateRegex pattern="[0-9]*"/>
+                    </h:inputText><br/>
+                    <h:message for="puntosDelJuego" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Unidades del juego"/>
+                    <h:inputText id="udsDelJuego" value="#{anyadirJuegoBacking.unidadesDelJuego}" required="true" requiredMessage="Introduzca las unidades actuales del juego" validatorMessage="Nombre no válido, por favor no introduzca ni simbolos, ni letras" size="3" maxlength="3">
+                        <f:validateRegex pattern="[0-9]*"/>
+                    </h:inputText><br/>
+                    <h:message for="udsDelJuego" style="color:red;"/><br/>
+                    
+                    <h:outputText value="No tiene descuento"/>
+                    <h:selectBooleanCheckbox valueChangeListener="#{anyadirJuegoBacking.cambiaModoHabilitado}" immediate="true">
+                        <f:ajax event="valueChange" render="puntosDescuento" execute="@this"/>
+                    </h:selectBooleanCheckbox><br/>
+                    
+                    <h:outputText value="Puntos de descuento"/>
+                    <h:inputText id="puntosDescuento" value="#{anyadirJuegoBacking.puntosDeDescuento}" required="true" requiredMessage="Introduzca las unidades actuales del juego" validatorMessage="Nombre no válido, por favor no introduzca ni simbolos, ni letras" disabled="#{anyadirJuegoBacking.tieneDescuento}" size="3" maxlength="3">
+                        <f:validateRegex pattern="[0-9]*"/>
+                    </h:inputText><br/>
+                    <h:message for="puntosDescuento" style="color:red;"/><br/>
+                    
+                    
+                    
+                    <h:outputText value="Es novedad?"/><br/>
+                    <h:selectOneRadio value="#{anyadirJuegoBacking.esNovedad}" id="esNovedad">
+                        <f:selectItem itemLabel="SI" itemValue="#{true}"/>
+                        <f:selectItem itemLabel="NO" itemValue="#{false}"/>
+                    </h:selectOneRadio>
+                    
+                    <h:outputText value="Es proximamente?"/><br/>
+                    <h:selectOneRadio value="#{anyadirJuegoBacking.esProximamente}" id="esProximamente">
+                        <f:selectItem itemLabel="SI" itemValue="#{true}"/>
+                        <f:selectItem itemLabel="NO" itemValue="#{false}"/>
+                    </h:selectOneRadio>
+                    
+                    <h:commandButton value="Añadir" action="#{anyadirJuegoBacking.anyadirJuego}"/>
+    
+                </h:form>       
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+            
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+                
+                <h:outputText value="Nombre: #{menuLoginBacking.usuario.nombre}"/><br/>
+                
+                <h:outputText value="Apellido: #{menuLoginBacking.usuario.apellido}"/><br/>
+                
+                <h:outputText value="Correo: #{menuLoginBacking.usuario.correo}"/><br/>
+                
+                <h:outputText value="Telefono: #{menuLoginBacking.usuario.telefono}"/><br/>
+                
+                <h:outputText value="Movil: #{menuLoginBacking.usuario.movil}"/><br/>
+                
+                <h:outputText value="Puntos: #{menuLoginBacking.usuario.puntos}"/><br/>
+                
+                <h:outputText value="Provincia: #{menuLoginBacking.usuario.direccion.provincia}"/><br/>
+                
+                <h:outputText value="Ciudad: #{menuLoginBacking.usuario.direccion.ciudad}"/><br/>
+                
+                <h:outputText value="Cod-Postal: #{menuLoginBacking.usuario.direccion.codPostal}"/><br/>
+        
+                <h:outputText value="Direccion: #{menuLoginBacking.usuario.direccion.direccion}"/><br/>
+                
+                <!--MODIFICAR DATOS DE LOS USUARIOS-->
+                <h:link value="Cambiar la contraseña" outcome="formularioCambioContrasenya"/><br/>
+                <h:link value="Cambiar telefonos de contactos" outcome="formularioCambioTelefono"/><br/>
+                <h:link value="Cambiar la direccion" outcome="formularioCambioDireccion"/><br/>
+                <h:form>
+                    <h:commandLink value="Darse de Baja" action="#{actividadUsuarioBacking.darDeBajaUsuario}"/>
+                </h:form>
+
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>
+
+
+            
+                        

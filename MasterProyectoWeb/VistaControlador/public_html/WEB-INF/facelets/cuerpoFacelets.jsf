@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+            
+
+        </h:head>
+        <h:body>
+        
+        
+            <!--ACTUALMENTE NO HAY NINGUNA BUSQUEDA-->
+            <c:if test="#{empty cabeceraFaceletsBacking.busqueda}">
+            
+            <div id="tituloBienvenida">
+                <h:outputText  value="BIENVENIDO" /><br/>
+            </div>
+            
+            <div id="cuerpoBienvenida">
+                <h:outputText id="cuerpoBienvenida" value="Esta web es un comercio electronico de venta de juegos. 
+                Las plataformas ofertadas son WII,Play 3 y Xbox360, de cada una de estas plataformas podras encontrar juegos. 
+                Encontraras fácilmente los juegos según tus búsquedas, pueden ser por genero que cada tipo de juego tiene, por plataforma, 
+                por nombre, o bien podrás encontrar los juegos que actualmente tiene un descuento.
+                En la cabecera de la web encontraras el buscador que te ayudara a encontrar
+                el juego que deseas comprar.Introduce tu primera busqueda.
+                En el Pie de página encontraras las novedades, lo juegos que proximamente ofertaremos, y top 5 de ventas de productos" /><br/>
+            </div>
+            
+            </c:if>
+            
+            
+            <!--BUSCANDO...-->
+            <c:if test="#{not empty cabeceraFaceletsBacking.busqueda}">
+            
+            
+                <!--BUSCANDO... POR NOMBRE-->
+                <c:if test="#{cabeceraFaceletsBacking.tipoBusquedaElegida eq 'Nombre'}" >
+                    <!--NO HAY COINCIDENCIAS-->
+                    <c:if test="#{empty cabeceraFaceletsBacking.resultadoBusqueda}"> 
+                        <div class="noCoincidencia">
+                            <h:outputText value="No hay coincidencias"/>
+                        </div>
+                    </c:if>
+                    
+                    <!--HAY COINCIDENCIAS-->
+                    <c:if test="#{not empty cabeceraFaceletsBacking.resultadoBusqueda}">
+                        <div class="infoJuego">
+                            <h:dataTable value="#{cabeceraFaceletsBacking.resultadoBusqueda}" var="juego" width="60%">
+                            
+                                <h:column>
+                                    
+                                    <!--<h:graphicImage library="imagenPequenya/" name="#{juego.imagenPequenya}"/>-->
+                                    
+                                </h:column>
+                                
+                                <h:column>
+                                    <h:link value="Nombre: #{juego.nombre}" outcome="infoJuego">
+                                        <f:param name="idJuego" value="#{juego.idExistencia}"/>
+                                    </h:link><br/>
+                                    <h:outputText value="Puntuacion: #{juego.puntuacion}"/><br/>
+                                    <h:outputText value="Genero: #{juego.genero}"/><br/>
+                                    <h:outputText value="Plataforma: #{juego.plataforma}"/><br/>
+                                    <h:outputText value="Puntos: #{juego.puntosexistencias.puntosJuego}"/><br/>
+                                    
+                                </h:column>
+                                
+                        </h:dataTable>
+                        </div>
+                        
+                    </c:if>
+                </c:if>
+                
+                
+                <!--BUSCANDO... POR PLATAFORMA-->
+                <c:if test="#{cabeceraFaceletsBacking.tipoBusquedaElegida eq 'Plataforma'}" >
+                    <!--NO HAY COINCIDENCIAS-->
+                    <c:if test="#{empty cabeceraFaceletsBacking.resultadoBusqueda}">
+                        <div class="noCoincidencia">
+                            <h:outputText value="No hay coincidencias.\nRecuerde que las plataformas ofertadas son:"/><br/>
+                            <h:outputText value="WII"/><br/>
+                            <h:outputText value="PLAYSTATION3"/><br/>
+                            <h:outputText value="XBOX 360"/>
+                        </div>
+                    </c:if>
+                    
+                    <!--HAY COINCIDENCIAS-->
+                    <c:if test="#{not empty cabeceraFaceletsBacking.resultadoBusqueda}">                        
+                        <div class="infoJuego">
+                            <h:dataTable value="#{cabeceraFaceletsBacking.resultadoBusqueda}" var="juego" width="60%">
+                            
+                                <h:column>
+                                    <!--<h:graphicImage library="imagenPequenya/" name="#{juego.imagenPequenya}"/>-->
+                                                                 
+                                </h:column>
+                                
+                                <h:column>
+                                    <h:link value="Nombre: #{juego.nombre}" outcome="infoJuego">
+                                        <f:param name="idJuego" value="#{juego.idExistencia}"/>
+                                    </h:link><br/>
+                                    <h:outputText value="Puntuacion: #{juego.puntuacion}"/><br/>
+                                    <h:outputText value="Genero: #{juego.genero}"/><br/>
+                                    <h:outputText value="Plataforma: #{juego.plataforma}"/><br/>
+                                    <h:outputText value="Puntos: #{juego.puntosexistencias.puntosJuego - juego.descuento}"/><br/>
+                                    <h:outputText value="Descuentos: #{juego.descuento}"/><br/>
+                                </h:column>
+    
+                        </h:dataTable>
+                        </div>
+                    </c:if>
+                </c:if>
+                
+                
+                <!--BUSCANDO... POR GENERO-->
+                <c:if test="#{cabeceraFaceletsBacking.tipoBusquedaElegida eq 'Genero'}" >
+                    <!--NO HAY COINCIDENCIAS-->
+                    <c:if test="#{empty cabeceraFaceletsBacking.resultadoBusqueda}">  
+                        <div class="noCoincidencia">
+                            <h:outputText value="No hay coincidencias.\nRecuerde que las plataformas ofertadas son:"/><br/>
+                            <h:outputText value="ACCION"/><br/>
+                            <h:outputText value="LUCHA"/><br/>
+                            <h:outputText value="DISPAROS"/><br/>
+                            <h:outputText value="PLATAFORMA"/><br/>
+                            <h:outputText value="SIMULACION"/><br/>
+                            <h:outputText value="DEPORTES"/><br/>
+                            <h:outputText value="EDUCACION"/><br/>
+                            <h:outputText value="ROL"/><br/>
+                        </div>
+                    </c:if>
+                        
+                    <!--HAY COINCIDENCIAS-->
+                    <c:if test="#{not empty cabeceraFaceletsBacking.resultadoBusqueda}">                        
+                        <div class="infoJuego">
+                            <h:dataTable value="#{cabeceraFaceletsBacking.resultadoBusqueda}" var="juego" width="60%">
+                            
+                                <h:column>
+                                    <!--<h:graphicImage library="imagenPequenya/" name="#{juego.imagenPequenya}"/>-->
+                                                                       
+                                </h:column>
+                                
+                                <h:column>
+                                    <h:link value="Nombre: #{juego.nombre}" outcome="infoJuego">
+                                        <f:param name="idJuego" value="#{juego.idExistencia}"/>
+                                    </h:link><br/>
+                                    <h:outputText value="Puntuacion: #{juego.puntuacion}"/><br/>
+                                    <h:outputText value="Genero: #{juego.genero}"/><br/>
+                                    <h:outputText value="Plataforma: #{juego.plataforma}"/><br/>
+                                    <h:outputText value="Puntos: #{juego.puntosexistencias.puntosJuego - juego.descuento}"/><br/>
+                                    <h:outputText value="Descuentos: #{juego.descuento}"/><br/>
+                                </h:column>
+    
+                        </h:dataTable>
+                        </div>
+                    </c:if>
+                </c:if>
+                
+                
+                <!--BUSCANDO... POR DESCUENTO-->
+                <c:if test="#{cabeceraFaceletsBacking.tipoBusquedaElegida eq 'Por descuento'}" >
+                    <!--NO HAY COINCIDENCIAS-->
+                    <c:if test="#{empty cabeceraFaceletsBacking.resultadoBusqueda}">
+                        <div class="noCoincidencia">
+                            <h:outputText value="No hay ningun producto disponible con descuentos"/>
+                        </div>
+                    </c:if>
+                    
+                    <!--HAY COINCIDENCIAS-->
+                    <c:if test="#{not empty cabeceraFaceletsBacking.resultadoBusqueda}">                        
+                        <div class="infoJuego">
+                            <h:dataTable value="#{cabeceraFaceletsBacking.resultadoBusqueda}" var="juego" width="60%">
+                            
+                                <h:column>
+                                    <!--<h:graphicImage library="imagenPequenya/" name="#{juego.imagenPequenya}"/>-->
+                                                                 
+                                </h:column>
+                                
+                                <h:column>
+                                    <h:link value="Nombre: #{juego.nombre}" outcome="infoJuego">
+                                        <f:param name="idJuego" value="#{juego.idExistencia}"/>
+                                    </h:link><br/>
+                                    <h:outputText value="Puntuacion: #{juego.puntuacion}"/><br/>
+                                    <h:outputText value="Genero: #{juego.genero}"/><br/>
+                                    <h:outputText value="Plataforma: #{juego.plataforma}"/><br/>
+                                    <h:outputText value="Puntos: #{juego.puntosexistencias.puntosJuego - juego.descuento}"/><br/>
+                                    <h:outputText value="Descuentos: #{juego.descuento}"/><br/>
+                                </h:column>
+    
+                        </h:dataTable>
+                        </div>
+                    </c:if>
+                </c:if>
+
+            </c:if>
+            
+        </h:body>
+    </html>
+</f:view>

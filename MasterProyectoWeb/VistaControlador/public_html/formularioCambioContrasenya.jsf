@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+                <h:form>
+                    
+                    <h:outputLabel value="Tu contraseña actual es: "/>
+                    <h:inputSecret id="contrasenyaActual" value="#{cambioContrasenyaBacking.contrasenyaActual}"  required="true" requiredMessage="Introduzca la contraseña"
+                                   validator="#{cambioContrasenyaBacking.comprobarContrasenyaActual}" >
+                    </h:inputSecret><br/>
+                    <h:message for="contrasenyaActual" style="color:red;"/><br/>
+                    
+                    <h:outputLabel value="Repita la contraseña"/>
+                    <h:inputSecret id="nuevaContrasenya" value="#{cambioContrasenyaBacking.nuevaContrasenya}" required="true" requiredMessage="Introduzca la contraseña otra vez"
+                                   validator="#{cambioContrasenyaBacking.comprobarContrasenya}">
+                    </h:inputSecret><br/>
+                    <h:message for="nuevaContrasenya" style="color:red"/><br/>
+                    
+                    <h:outputLabel value="Tu contraseña actual es: "/>
+                    <h:inputSecret id="repetirNuevaContrasenya" value="#{cambioContrasenyaBacking.repetirNuevaContrasenya}"  required="true" requiredMessage="Introduzca la contraseña"
+                                   validator="#{formularioUsuario.comprobarContrasenya}" >
+                    </h:inputSecret><br/>
+                    <h:message for="repetirNuevaContrasenya" style="color:red;"/><br/>
+                    
+                    <h:commandButton value="Aceptar cambio" action="#{cambioContrasenyaBacking.cambiarContrasenya}" onclick="return confirm('Esta seguro')"/>
+    
+                </h:form>       
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>

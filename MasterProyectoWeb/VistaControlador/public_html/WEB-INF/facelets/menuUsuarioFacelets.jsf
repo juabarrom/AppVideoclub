@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:p="http://primefaces.org/ui">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+
+
+        </h:head>
+        <h:body>
+        <!--EL USUARIO NO ESTA LOGADO EN EL SISTEMA-->
+        <!--${menuLoginBacking.estadoLogin==null}-->
+            <c:if test="#{menuLoginBacking.estadoLogin==null}">
+
+                <!--Login-->
+                <div class="menuLogin">
+                    <h:form>
+                        <h:outputLabel value="E-mail"/>
+                        <h:inputText id="correo" value="#{menuLoginBacking.correo}" required="true" requiredMessage="Introduzca su correo" validatorMessage="El formato del e-mail no es válido">
+                            <f:validateRegex pattern="^[a-zA-Z0-9_-]{2,15}@[a-zA-Z0-9_-]{2,15}.[a-zA-Z]{2,4}(.[a-zA-Z]{2,4})?$"/>
+                        </h:inputText>
+                        
+                        
+                        <h:outputLabel value="Contraseña"/>
+                        <h:inputSecret id="contrasenya" value="#{menuLoginBacking.contrasenya}"  required="true" requiredMessage="Introduzca la contraseña" validatorMessage="El formato de la contraseña no es correcto, no introduzca simbolos">
+                            <f:validateRegex pattern="[\w]*"/>
+                        </h:inputSecret>                    
+                        <h:commandButton value=" Login" action="#{menuLoginBacking.Loguearte}" />
+                        <h:link value="Registrese" outcome="registrar"/>
+                        
+                        <h:message for="correo" style="color:red;"/><br/>
+                        <h:message for="contrasenya" style="color:red;"/><br/>
+                        
+        
+                    </h:form>
+                    
+                    
+                </div>            
+            </c:if>
+        <!--EL USUARIO ESTA LOGADO EN EL SISTEMA Y NO ES EL ADMIN-->
+        
+            <c:if test="#{menuLoginBacking.estadoLogin =='ACTIVO'}">
+                <div class="menuLoginActivo">        
+                    <h:outputLabel value="HOLA #{menuLoginBacking.usuario.nombre}"/>
+                    <h:outputLabel value=" PUNTOS: #{menuLoginBacking.usuario.puntos}"/>
+                    
+                    <h:link value=" NOTIFICACIONES" outcome="notificacionUsuario"/>
+                        
+                    <h:link value=" Datos de Usuario" outcome="datos_usuario"/>
+                    
+                    <h:form>
+                        <h:commandLink action="#{menuLoginBacking.Desloguearte}" value=" Cerrar sesión"/>
+                    </h:form>
+                </div>
+            </c:if>                    
+        
+        
+        <!--EL USUARIO ESTA LOGADO EN EL SISTEMA Y ES EL ADMIN-->
+            <c:if test="#{menuLoginBacking.estadoLogin =='ADMIN'}">
+                <div class="menuLoginAdmin">                
+                    <h:outputLabel value="HOLA #{menuLoginBacking.usuario.nombre}"/>
+                    
+                    
+                    <h:link value=" LISTA DE USUARIOS " outcome="usuarios"/>
+                    
+                    <h:link value=" PRODUCTOS "  outcome="productos"/>
+                    
+                    <h:link value=" AÑADIR PRODUCTOS" outcome="formularioAnyadirJuego" />
+                    
+                    <h:form>
+                        <h:commandLink action="#{menuLoginBacking.Desloguearte}" value=" Cerrar sesión"/>
+                    </h:form>
+            
+                </div>
+            </c:if>
+            
+        </h:body>
+    </html>
+</f:view>
+

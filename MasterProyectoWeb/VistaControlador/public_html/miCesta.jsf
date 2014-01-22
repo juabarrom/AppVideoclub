@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        
+        <h:head>
+            <f:metadata>
+                <f:viewParam name="idJuego" value="#{anyadirProductoCestaBacking.idJuego}" />
+            </f:metadata>   
+        </h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+            
+            
+        <!--CUERPO-->
+        
+            <ui:define name="cuerpo">
+            
+            <!--LA CESTA ESTA VACIA-->
+                <c:if test="#{empty anyadirProductoCestaBacking.juegosAComprar}">
+                <div id="cestaVacia">
+                    <h:link value="Seguir comprando" outcome="ecomercio"></h:link>
+                </div>
+                </c:if>
+                
+            <!--LA CESTA TIENE PRODICTOS-->        
+                <c:if test="#{not empty anyadirProductoCestaBacking.juegosAComprar}">
+                    <div id="cestaLLena">
+                        <h:link value="Seguir comprando " outcome="ecomercio"></h:link>
+                        <h:form>
+                        <h:commandLink id="confimarCompra" value=" Confirmar Compra" action="#{anyadirProductoCestaBacking.confirmarCompra}"/>
+                            <h:dataTable id="idTablaJuego" value="#{anyadirProductoCestaBacking.juegosAComprar}" var="juego" border="2"
+                                         style="text-align:center;">
+                        
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Nombre"/>
+                                </f:facet>
+                                <h:outputText value="#{juego.nombre}"/>
+                            </h:column>
+                            
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Plataforma"/>
+                                </f:facet>
+                                <h:outputText value="#{juego.plataforma}"/>
+                            </h:column>
+                            
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Uds"/>
+                                </f:facet>
+                                
+                                <h:inputText id="uds" size="2" maxlength="2" value="#{anyadirProductoCestaBacking.udsCompra}" validatorMessage="Formato de teléfono no válido" required="true" requiredMessage="Introduce la cantidad de productos que necesitas" >
+                                    <f:validateRegex pattern="[0-9]*"/>
+                                </h:inputText><br/>
+                            </h:column>
+                            
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Puntos por unidad"/>
+                                </f:facet>
+                                <h:outputText value="#{juego.puntosexistencias.puntosJuego-juego.descuento}"/>
+                            </h:column>
+                        </h:dataTable>
+                        <h:message for="uds" style="color:red;"/><br/>
+            
+                    </h:form>
+                </div>
+
+                    
+                    
+                </c:if>
+                
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>
+
+
+            
+                        

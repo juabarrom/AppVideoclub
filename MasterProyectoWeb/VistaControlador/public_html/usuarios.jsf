@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head></h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+            
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+            <h:form>
+            
+            
+                <h:selectOneRadio value="#{usuariosBacking.elegido}" immediate="true">
+                        <f:selectItems value="#{usuariosBacking.menuElegido}"/>
+                        <f:ajax event="change" execute="@this" render="idTablaUsuario"/>
+                </h:selectOneRadio>
+                
+                
+                <h:dataTable id="idTablaUsuario" value="#{usuariosBacking.usuarios}" var="usuarios" border="2">
+                
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Nombre"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.nombre}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Correo"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.correo}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Puntos"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.puntos}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Movil"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.movil}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Estado"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.estado}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Administrador"/>
+                        </f:facet>
+                        <h:outputText value="#{usuarios.esAdmin}"/>
+                    </h:column>
+                    
+                </h:dataTable>
+            </h:form>
+            </ui:define>
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>

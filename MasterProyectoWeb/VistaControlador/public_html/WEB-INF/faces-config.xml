@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee">
+    
+    <!--BEAN_BACKING-->
+    <managed-bean>
+        <managed-bean-name>formularioUsuario</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.FormularioUsuario</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>menuLoginBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.MenuLogin_Backing</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>cambioContrasenyaBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.CambioContrasenya_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>        
+    </managed-bean>
+    
+ 
+    <managed-bean>
+        <managed-bean-name>cambioTelefonoBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.CambioTelefono_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        
+        <managed-property>
+            <property-name>telefono</property-name>
+            <value>#{menuLoginBacking.usuario.telefono}</value>
+        </managed-property>
+        
+        <managed-property>
+            <property-name>movil</property-name>
+            <value>#{menuLoginBacking.usuario.movil}</value>
+        </managed-property>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>cambioDirrecionBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.CambioDireccion_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>    
+    </managed-bean>
+    
+    
+    <managed-bean>
+        <managed-bean-name>actividadUsuarioBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.ActividadUsuario_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>anyadirJuegoBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.AnyadirJuego_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>productosBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.Productos_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>datosDeJuegosBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.DatosDeJuegos_Backing</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>usuariosBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.Usuarios_Backing</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>datosUsuarioBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.DatosUsuario_Backing</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope> 
+    </managed-bean>
+    
+    
+    
+    <managed-bean>
+        <managed-bean-name>pieFaceletsBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.PieFacelets_Backing</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>cabeceraFaceletsBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.CabeceraFacelets_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>infoJuegoBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.InfoJuego_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>upload1Backing1</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.Upload1_backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>anyadirProductoCestaBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.AnyadirProductoCesta_Backing</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope> 
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>notificacionUsuarioBacking</managed-bean-name>
+        <managed-bean-class>master.proyecto.juandiego.vistacontrolador.NotificacionUsuario_Backing</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope> 
+        
+         <managed-property>
+            <property-name>idUsuario</property-name>
+            <value>#{menuLoginBacking.usuario.idUsuario}</value>
+        </managed-property>
+        
+        <managed-property>
+            <property-name>listaPedido</property-name>
+            <value>#{menuLoginBacking.usuario.pedidoList}</value>
+        </managed-property>
+        
+        
+        
+    </managed-bean>
+    
+    <!--REGLAS DE NAVEGACION-->
+    <navigation-rule>
+    
+        <from-view-id>/ecomercio.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>registrar</from-outcome>
+            <to-view-id>/registrar.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>datosUsuario</from-outcome>
+            <to-view-id>/datos_usuario.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>productos</from-outcome>
+            <to-view-id>/productos.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/formularioCambioTelefono.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>correcto</from-outcome>
+            <to-view-id>/datos_usuario.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/formularioCambioContrasenya.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>correcto</from-outcome>
+            <to-view-id>/datos_usuario.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/formularioCambioDireccion.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>correcto</from-outcome>
+            <to-view-id>/datos_usuario.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/datos_usuario.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>inactivo</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/formularioAnyadirJuego.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>correcto</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/productos.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/datosDeJuegos.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>productos</from-outcome>
+            <to-view-id>/productos.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/usuarios.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/datosDeUsuarios.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>usuario</from-outcome>
+            <to-view-id>/usuarios.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/registrar.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/infoJuego.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cesta</from-outcome>
+            <to-view-id>/miCesta.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/upload.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>1</from-outcome>
+            <to-view-id>/foto.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/miCesta.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>confirmado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/notificacionUsuario.jsf</from-view-id>
+        <navigation-case>
+            <from-outcome>busqueda</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deslogado</from-outcome>
+            <to-view-id>/ecomercio.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

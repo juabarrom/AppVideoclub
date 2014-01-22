@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head>
+            <f:metadata>
+                <f:viewParam name="idJuego" value="#{infoJuegoBacking.idJuego}"/>   
+            </f:metadata>
+        
+        </h:head>
+        <h:body>
+
+        <ui:composition template="/WEB-INF/facelets/principalFacelets.jsf">
+        <!--CABECERA-->
+            <ui:define name="cabecera">
+                <ui:include src="/WEB-INF/facelets/cabeceraFacelets.jsf"/>
+            </ui:define>
+            
+        <!--MENU USUARIO-->
+            <ui:define name="menu_usuario">
+                <ui:include src="/WEB-INF/facelets/menuUsuarioFacelets.jsf"/>
+            </ui:define>
+            
+            
+            
+        <!--CUERPO-->
+            <ui:define name="cuerpo">
+            
+                <div id="tituloJuego" >
+                    <h:outputText value="#{infoJuegoBacking.juego.nombre}"/><br/>
+                </div>
+                
+                <div id="imagenInfoJuego">
+                    <h:graphicImage library="imagenGrande/" name="HaloIV.png" alt="imagen Grande" height="71" width="122"/><br/>
+                    
+                    <h:form>    
+                        <h:link value="Añadir a la cesta" outcome="miCesta">
+                            <f:param name="idJuego" value="#{infoJuegoBacking.idJuego}"/>
+                        </h:link><br/>
+                    </h:form>
+                </div>
+                
+                <div id="caracteristicaJuego">
+                    <h:outputText value="Valoración: #{infoJuegoBacking.juego.puntuacion}"/><br/>
+                    <h:outputText value="Puntos: #{infoJuegoBacking.juego.puntosexistencias.puntosJuego}"/><br/>
+                    <h:outputText value="Genero: #{infoJuegoBacking.juego.genero}"/><br/>
+                    <h:outputText value="Plataforma: #{infoJuegoBacking.juego.plataforma}"/><br/>
+                    <h:outputText value="Descuento de: #{infoJuegoBacking.juego.descuento}"/><br/>
+                    
+                </div>
+                <div id="tituloJuego">
+                    <h:outputText value="#{infoJuegoBacking.juego.descripcion}"/>
+                </div>
+                
+            </ui:define>
+                 
+            
+            
+        <!--PIE-->
+            <ui:define name="pie">
+                <ui:include src="/WEB-INF/facelets/pieFacelets.jsf"/>
+            </ui:define>
+            
+    
+        </ui:composition>
+    
+                
+        </h:body>
+    </html>
+</f:view>
+
+
+            
+                        

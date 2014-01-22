@@ -1,0 +1,125 @@
+/*BODY GENERAL*/
+body {
+    background-color: White;
+    color: Black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto 0 auto;
+    width: 900px;
+}
+
+
+/*CABECERA*/
+#formBusqueda {
+    text-align: center;
+    background-color: rgb(132,255,255);
+}
+
+#cabeceraImagenCesta {
+    background-color: Blue;
+    text-align: left;
+}
+
+
+/*MENU LOGIN*/
+.menuLogin {
+    text-align: center;
+}
+.menuLoginActivo
+{
+    text-align: left;
+}
+.menuLoginAdmin
+{
+    text-align: left;
+}
+/*CUERPO*/
+#tituloBienvenida {
+    text-align: center;
+}
+
+#cuerpoBienvenida {
+    width: 750px;
+    margin: 0 auto 0 auto;
+}
+
+.noCoincidencia
+{
+    font-size: large;   
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoJuego
+{
+    margin-left: 25%;
+    margin-right: -25%;
+    
+}
+
+#tituloJuego
+{
+    font-size: large;   
+    font-weight: bold;
+    text-align: left;
+    padding-left: 6%;
+}
+
+
+#imagenInfoJuego
+{
+    margin-bottom: 0;
+    margin-left: 0%;
+    margin-top: 0;
+    padding-left: 8%;
+}
+
+
+#caracteristicaJuego
+{
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-top: -10%;
+    padding-left: 24%;}
+
+#descripcionJuego
+{
+    font-size: small;   
+    font-weight: bold;
+    text-align: left;
+}
+
+#cestaVacia
+{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#cestaLLena table
+{
+    background-color: Blue;
+    text-align: center;
+    margin-left: 28%;
+}
+#confimarCompra
+{
+    background-color: Olive;
+}
+/*PIE*/
+#pieProximamente {
+    background-color: green;
+    width: 300px;
+    display: table-cell;
+}
+
+#pieNovedades {
+    background-color: green;
+    width: 300px;
+    display: table-cell;
+}
+
+#pieTop {
+    background-color: green;
+    width: 300px;
+    display: table-cell;
+}
